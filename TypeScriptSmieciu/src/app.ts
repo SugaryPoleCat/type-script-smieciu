@@ -4,37 +4,13 @@ interface User {
     id: number;
 }
 */
-import { User } from "./interfaces";
+
 import { UserPrivilage } from "./enums";
-class UserAccount {
-    name;
-    _id;
-    privilage?;
+import { UserAccount, UserPrint } from "./users";
 
-    constructor(name: string, id: number, privilage?: string) {
-        this.name = name;
-        this._id = id;
-        if (privilage !== undefined || privilage !== null) {
-            this.privilage = privilage;
-        } else {
-            this.privilage = UserPrivilage.User;
-        }
-    }
-}
+// create new users;
+const user1 = new UserAccount("Murph", 2);
+const user2 = new UserAccount("Damian", 1, UserPrivilage.Admin);
 
-
-const murph: User = new UserAccount("Murphy", 2);
-const damia: User = new UserAccount("Damian", 1, UserPrivilage.Admin);
-
-
-function printUser(user: User) {
-    let reply: string = `${user.name} | ${user._id}`;
-
-    if (user.privilage !== undefined) {
-        reply += ` | ${user.privilage}`;
-    }
-    return console.log(reply);
-}
-
-printUser(murph);
-printUser(damia);
+UserPrint(user1);
+UserPrint(user2);
