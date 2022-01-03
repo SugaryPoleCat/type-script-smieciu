@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "lib": [ "es6" ],
+        "sourceMap": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "build/"
+    },
+    "include": [ "src/*" ],
+    "exclude": [
+        "node_modules"
+    ]
+}
