@@ -1,14 +1,17 @@
 import { User } from "./interfaces";
 import { UserPrivilage } from "./enums";
 
+let idCount: number = 0;
+
 export class UserAccount {
     name: string;
     _id: number;
     privilage?: string;
 
-    constructor(Name: string, ID: number, Privilage?: string) {
+    constructor(Name: string, Privilage?: string) {
+        idCount++;
         this.name = Name;
-        this._id = ID;
+        this._id = idCount;
 
         // check if its undefined or nulled.
         if (Privilage !== undefined || Privilage !== null) {
