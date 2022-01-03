@@ -6,9 +6,10 @@
         "sourceMap": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outDir": "build/"
+        "outDir": "build/",
+        "sourceRoot": "src/"
     },
-    "include": [ "src/*" ],
+    "include": [ "src/" ],
     "exclude": [
         "node_modules"
     ]

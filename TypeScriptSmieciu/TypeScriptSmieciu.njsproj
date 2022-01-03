@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b6e42a97-865f-4569-babd-4e6bb7955d01</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>src\app.ts</StartupFile>
+    <StartupFile>build\app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -30,11 +30,20 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="src\app.ts" />
+    <Content Include="build\app.js" />
+    <Content Include="build\app.js.map" />
+    <Content Include="build\enums.js" />
+    <Content Include="build\enums.js.map" />
+    <Content Include="build\interfaces.js" />
+    <Content Include="build\interfaces.js.map" />
+    <Content Include="build\users.js" />
+    <Content Include="build\users.js.map" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="build\" />
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
